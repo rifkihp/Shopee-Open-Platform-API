@@ -1,14 +1,14 @@
 <?php
     function getItemListShopLevel($partnerId, $partnerKey, $accessToken, $shopId) {
         global $host;
-        $path = "/api/v2/product/get_item_list";
+        $path = "/api/v2/product/get_category";
         
         $timest = time();
         $baseString = sprintf("%s%s%s%s%s", $partnerId, $path, $timest, $accessToken, $shopId);
         $sign = hash_hmac('sha256', $baseString, $partnerKey);
 
         $url = sprintf(
-            "%s%s?access_token=%s&item_status=NORMAL&offset=0&page_size=100&partner_id=%s&shop_id=%s&sign=%s&timestamp=%s&update_time_from=946684800&update_time_to=1701734400", 
+            "%s%s?access_token=%s&language=id&partner_id=%s&shop_id=%s&sign=%s&timestamp=%s", 
             $host, $path, $accessToken, $partnerId, $shopId, $sign, $timest
         
         );

@@ -32,4 +32,3 @@
     $shopId     = (int) $_POST['shopId'];
     
     getTokenShopLevel($code, $partnerId, $partnerKey, $shopId);
-?>

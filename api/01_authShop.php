@@ -16,4 +16,3 @@
     $partnerKey = $_POST['partner_key'];
 
     echo authShop($partnerId, $partnerKey);
-?>

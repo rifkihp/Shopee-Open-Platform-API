@@ -34,5 +34,4 @@
     $shopId           = (int) $_POST['shopId'];
     $shopRefreshToken = $_POST['shopRefreshToken']; 
     
-    getAccessTokenShopLevel($partnerId, $partnerKey, $shopId, $shopRefreshToken)
-?>
+    getAccessTokenShopLevel($partnerId, $partnerKey, $shopId, $shopRefreshToken);
